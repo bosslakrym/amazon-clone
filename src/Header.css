@@ -66,4 +66,18 @@
 .header_basketCount {
     margin-left: 10px;
     margin-right: 10px;
+    color: white !important;
+}
+
+.header_deliver {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.header_locationIcon {
+    color: white;
+    justify-content: center;
+    padding-top: 10px;
 }

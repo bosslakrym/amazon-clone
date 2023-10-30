@@ -1,15 +1,28 @@
 import React from 'react'
 import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import {Link} from 'react-router-dom';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 
 function Header() {
   return (
     <div className='header'>
+        <Link to='/'>
         <img className='header_logo' 
         src="https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png" 
         alt='Amazon Clone Logo'/>
-
+        </Link>
+            <div className='header_locationIcon'>
+                <LocationOnIcon />
+            </div>
+            <div className='header_deliver'>
+            <span className='header_optionLineOne'>
+                    Deliver to</span>
+                <span className='header_optionLineTwo'>
+                    Nigeria</span>
+        </div>
         <div className='header_search'>
             <input className='header_searchInput' type='text' placeholder='Search' />
             <SearchIcon className='header_searchIcon'/>
@@ -36,8 +49,10 @@ function Header() {
             </div>
 
             <div className='header_optionBasket'>
-            <ShoppingBagIcon />
+            <Link to='/checkout'>
+            <ShoppingBasketIcon />
             <span className='header_optionLineTwo header_basketCount'>0</span>
+            </Link>
             </div>
         
         </div>
